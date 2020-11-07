@@ -38,3 +38,10 @@ class UserProfile(AbstractBaseUser,PermissionsMixin):
 	USERNAME_FIELD='email'
 	REQUIRED_FIELDS=['name','mobile']
 
+class DeliveryStaff(models.Model):
+	"""Details of delivery staff"""
+	staff=models.ForeignKey(UserProfile,on_delete=models.CASCADE)
+
+	def __str__(self):
+		return str(self.id)	
+

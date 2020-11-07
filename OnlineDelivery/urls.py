@@ -21,7 +21,8 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/users/',include('UserManagement.urls')),
-    path('api/products/',include('ProductManagement.urls'))
+    path('api/products/',include('ProductManagement.urls')),
+    path('api/orders/',include('OrderManagement.urls'))
 
 ]
 
