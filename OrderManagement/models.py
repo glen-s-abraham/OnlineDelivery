@@ -11,7 +11,7 @@ class Order(models.Model):
 		('od','OUTFORDELIVERY'),
 		('dr','DELIVERED'),
 	)
-	user=models.ForeignKey(UserProfile,on_delete=models.CASCADE)
+	user=models.ForeignKey(UserProfile,related_name='user',on_delete=models.CASCADE,blank=True,null=True)
 	date=models.DateTimeField(default=now)
 	total_amount=models.DecimalField(max_digits=5,decimal_places=2)
 	status=models.CharField(max_length=50,choices=STATUS,default='pl')

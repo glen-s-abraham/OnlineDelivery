@@ -17,12 +17,15 @@ from django.contrib import admin
 from django.urls import path,include
 from django.conf.urls.static import static
 from django.conf import settings
+from Documentation import views
 
 urlpatterns = [
+    path('', views.documentation),
     path('admin/', admin.site.urls),
     path('api/users/',include('UserManagement.urls')),
     path('api/products/',include('ProductManagement.urls')),
-    path('api/orders/',include('OrderManagement.urls'))
+    path('api/orders/',include('OrderManagement.urls')),
+    path('api/deliveries/',include('DeliveryManagement.urls'))
 
 ]
 

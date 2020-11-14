@@ -1,10 +1,10 @@
 from django.urls import path,include
 from rest_framework import routers
 
-from OrderManagement import views
+from DeliveryManagement import views
 
 router=routers.DefaultRouter()
-router.register('OrderList',views.OrderView)
+router.register('DeliveryList/',views.DeliveryView)
 
 
 

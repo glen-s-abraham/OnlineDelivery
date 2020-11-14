@@ -38,6 +38,7 @@ class OrderSerializer(serializers.ModelSerializer):
 			o.price=order.get('price',o.price)
 			o.qty=order.get('qty',o.qty)
 			o.save()
+		instance.save()	
 		return instance	
 
 

@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'UserManagement',
     'ProductManagement',
     'OrderManagement',
+    'Documentation'
 ]
 
 MIDDLEWARE = [
